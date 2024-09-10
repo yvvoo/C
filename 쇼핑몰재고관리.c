@@ -42,7 +42,7 @@ int main(void)
 	}
 
 	//특정 ID에 해당하는 상품의 재고 수량 출력
-	printf("\n");				//공백
+	printf("\n");			
 	printf("재고를 확인할 상품 ID를 입력하세요(1~%d): ", num_products);
 	scanf_s("%d", &ID);
 
