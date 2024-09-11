@@ -33,6 +33,11 @@ int main(void)
 	for (int i = 0; i < num_products; i++)
 	{
 		scanf_s("%d", &sold[i]);
+		if (sold[i] > received[i])
+		{
+			printf("판매 수량은 입고 수량보다 많을 수 없습니다. 다시 시도해주세요.\n");
+			return 1;
+		}
 	}
 
 	//재고 수량 계산
