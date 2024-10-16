@@ -229,6 +229,98 @@ int main() {
     return 0;
 }
 
+문제 4: 두 문자열 이어 붙이기
+#include <stdio.h>
+
+void my_strcat(char *dest, char *src) {
+    while (*dest) {
+        dest++;  // dest가 끝에 도달할 때까지 이동
+    }
+    while (*src) {
+        *dest = *src;  // src의 문자를 dest에 복사
+        dest++;
+        src++;
+    }
+    *dest = '\0';  // 이어 붙인 후 문자열의 끝에 NULL 추가
+}
+
+int main() {
+    char str1[100], str2[100];
+
+    printf("첫 번째 문자열을 입력하세요: ");
+    scanf("%s", str1);
+
+    printf("두 번째 문자열을 입력하세요: ");
+    scanf("%s", str2);
+
+    my_strcat(str1, str2);  // 두 문자열 합치기
+
+    printf("두 문자열을 이어 붙인 결과: %s\n", str1);
+
+    return 0;
+}
+
+문제 5: 포인터로 문자열을 뒤집기
+#include <stdio.h>
+#include <string.h>
+
+void reverse_string(char *str) {
+    int length = strlen(str);
+    char *start = str;
+    char *end = str + length - 1;
+    char temp;
+
+    // 문자열 뒤집기
+    while (start < end) {
+        temp = *start;
+        *start = *end;
+        *end = temp;
+
+        start++;
+        end--;
+    }
+}
+
+int main() {
+    char str[100];
+
+    printf("문자열을 입력하세요: ");
+    scanf("%s", str);
+
+    reverse_string(str);  // 문자열 뒤집기
+
+    printf("뒤집힌 문자열: %s\n", str);
+
+    return 0;
+}
+
+문제 6: 배열과 문자열을 이용한 단어 개수 세기
+#include <stdio.h>
+#include <string.h>
+
+int count_words(char *str) {
+    int count = 0;
+    while (*str != '\0') {
+        while (*str == ' ') str++;  // 공백 무시
+        if (*str != '\0') count++;  // 단어의 시작
+        while (*str != ' ' && *str != '\0') str++;  // 단어의 끝
+    }
+    return count;
+}
+
+int main() {
+    char str[200];
+
+    printf("문자열을 입력하세요: ");
+    gets(str);
+
+    int word_count = count_words(str);  // 단어 개수 세기
+
+    printf("입력한 문자열의 단어 개수는 %d입니다.\n", word_count);
+
+    return 0;
+}
+
 ----------------------------------------------------------------------
 <구조체>
 
