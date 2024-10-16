@@ -40,7 +40,7 @@ int main(void)
 		if ((i + 1) % 10 == 0) printf("\n");
 	}
 	for (int i = 0; i < SIZE; i++) {
-		total += number[i];
+		total += number[i];		// total = total + number[i]
 	}
 	avg = (float)total / SIZE;
 
