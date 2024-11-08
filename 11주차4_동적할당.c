@@ -50,8 +50,7 @@ int main()
             printf("프로그램을 종료합니다.\n");
         }
         
-        printf("%d\n", menu);
-    } while(menu > 0);
+      } while(menu > 0);
     
     return 0;
 }
