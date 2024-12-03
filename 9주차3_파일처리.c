@@ -1,4 +1,4 @@
-5개의 문자열을 입력받아 output.txt 파일에 저장하는 프로그램
+// 5개의 문자열을 입력받아 output.txt 파일에 저장하는 프로그램
 
 #include <stdio.h>
 int getLine(char* line)
