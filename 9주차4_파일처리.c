@@ -1,3 +1,6 @@
+// 파일을 복사하는 프로그램. 
+// output.txt 파일의 내용을 읽어서 output2.txt 파일에 복사하는 기능
+
 #include <stdio.h>
 int getLine(char* line)
 {
