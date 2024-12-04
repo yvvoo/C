@@ -1,7 +1,10 @@
+// 2진수 형식으로 입력된 두 숫자에 대해 사칙 연산을 수행하는 프로그램
+// 2진수를 16비트 크기의 배열로 변환한 후, 그 값을 10진수로 변환하여 연산을 수행하고 결과를 출력
+
 #include <stdio.h>
 #include <string.h>
 #include <math.h>
-#define WORD    16 // 16비트 길이의 2진수를 처리하기 위한 상수 정의
+#define WORD 16   // 16비트 길이의 2진수를 처리하기 위한 상수 정의
 
 // 문자열로 입력된 2진수를 WORD 크기의 2진수 배열로 변환
 void getBinary(char bin[], char str[], int n) {
