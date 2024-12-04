@@ -1,3 +1,4 @@
+// 구조체를 이용해 좌표(점)를 랜덤생성하는 프로그램
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
