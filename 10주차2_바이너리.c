@@ -1,3 +1,5 @@
+// 사용자로부터 입력을 받아 output.bin이라는 파일에 이진 형식으로 저장하는 프로그램
+
 #include <stdio.h>
 #include <string.h>
 #define gets(input) fgets(input, sizeof(input), stdin)
