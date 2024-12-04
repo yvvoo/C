@@ -238,7 +238,7 @@ int main()
     l2 = drawingLotto();             // 로또 추첨 번호 생성
     printLotto(l);                   // 자동 생성된 로또 번호 출력
     printLotto(l2);                  // 추첨된 로또 번호 출력
-    count = matchCount(l,l2);        // 일치하는 번호 개수 계산산
+    count = matchCount(l,l2);        // 일치하는 번호 개수 계산
     printf("match : %d\n", count);   // 일치하는 번호 개수 출력
     return 0;
 }
