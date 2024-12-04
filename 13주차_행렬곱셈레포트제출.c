@@ -30,7 +30,7 @@ void multiMatrix(int matrix1[ROW][COL], int matrix2[ROW][COL], int result[ROW][C
         for(int j = 0; j < col2; j++) {
             result[i][j] = 0;
             for(int k = 0; k < col1; k++) {
-                result[i][j] += matrix1[i][k] * matrix2[k][j];        // 행렬 곱셈 진
+                result[i][j] += matrix1[i][k] * matrix2[k][j];        // 행렬 곱셈 진행 
             }
         }
     }
