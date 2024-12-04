@@ -16,7 +16,7 @@ int inputMenu(void){
     return input;
 }
 
-// 동적할당 이용해서 POINT 구조체 생성, x,y 랜덤값으로 초기화 , 생성된 구조체의 포인터 반환하는 함
+// 동적할당 이용해서 POINT 구조체 생성, x,y 랜덤값으로 초기화 , 생성된 구조체의 포인터 반환하는 함수
 POINT* makePoint(void){
     POINT* p = (POINT*)malloc(sizeof(POINT));        // POINT 구조체 크기만큼 메모리 할당 
     p->x = rand() % 100;                    // x값 랜덤 초기화
