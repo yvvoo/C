@@ -8,13 +8,13 @@ typedef struct point{
     int y;
 }POINT;
 
-POINT makePoint(void){
+POINT makePoint(void){                            // 사용자로부터 입력받아 POINT 구조체로 반환하는 함수.
     POINT p;
     scanf("%d %d", &p.x, &p.y);
     return p;
 }
 
-void makeRandomPoints(POINT p[], int size){
+void makeRandomPoints(POINT p[], int size){       // 랜덤으로 점 생성 후 배열 p[]에 저장하는 함수.
     srand(time(NULL));
     for(int i=0;i<size;i++){
         p[i].x = rand() % 100;
@@ -22,12 +22,12 @@ void makeRandomPoints(POINT p[], int size){
     }
 }
 
-void printPoints(POINT p[], int size){
+void printPoints(POINT p[], int size){            // 배열p[]에 저장된 점들을 출력하는 함수.
     for(int i=0;i<size;i++)
         printf("point[%d] = x : %d, y : %d\n", i, p[i].x, p[i].y);
 }
 
-void saveFile(POINT p[], int size){
+void saveFile(POINT p[], int size){                // 배열p[]에 저장된 점들을 파일에 저장하는 함수. 
     FILE* fp;
     fp = fopen("struct.bin", "wb");
     if(fp == NULL) exit(-1);
@@ -35,7 +35,7 @@ void saveFile(POINT p[], int size){
     fclose(fp);
 }
 
-void loadFile(POINT p[], int size){
+void loadFile(POINT p[], int size){                // 파일에서 점들의 데이터를 읽어오는 함수.
     FILE* fp;
     fp = fopen("struct.bin", "rb");
     if(fp == NULL) exit(-1);
